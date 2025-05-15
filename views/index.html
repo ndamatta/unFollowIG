@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="/js/main-js.js" defer></script>
+  <link rel="stylesheet" href="/css/bulma.min.css">
   <link rel="stylesheet" href="/css/main-style.css">
-  <script src="/js/burgerbutton.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>Test</title>
 </head>
 <body>
-  <!-- Navbar-->
-  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="#">
-      <strong>Website title</strong>
+      <strong>unFollowIG</strong>
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
@@ -25,11 +27,68 @@
 
   <div id="navbarBasic" class="navbar-menu">
     <div class="navbar-end">
-      <a class="navbar-item" href="#">
+      <a id="documentation" class="navbar-item" href="#">
         Documentation
       </a>
     </div>
   </div>
 </nav>
+
+
+<section class="hero is-fullheight">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-7">
+          <figure class="image is-16by9">
+            <img src="/img/logo.webp" alt="unFollowIG-Logo" style="object-fit: cover; width: 100%; height: 100%;">
+          </figure>
+        </div>
+
+        <div id="hero-text" class="column is-5">
+          <div class="container is-mobile">
+              <h1 class="title">unFollowIG</h1>
+              <p class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, tempora.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="transition-banner" class="section">
+  <div class="container">
+    <h2 class="title is-3 has-text-weight-semibold">
+      Just paste your info down here to get rolling
+    </h2>
+    <p class="subtitle is-4" style="opacity: 0.9;">
+      Add your followers and following — we’ll handle the rest
+    </p>
+  </div>
+</section>
+
+<section id="text-box-container" class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-6">
+        <label class="label" for="followers">Followers:</label>
+        <textarea id="followers" class="textarea" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, tempora."></textarea>
+      </div>
+
+      <div class="column is-6">
+        <label class="label" for="following">Following:</label>
+        <textarea id="following" class="textarea" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, tempora."></textarea>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer has-background-light">
+  <div class="content has-text-centered">
+    <p>
+      <strong>unFollowIG</strong>| @ndamatta | Bulma</a>
+    </p>
+  </div>
+</footer>
 </body>
 </html>
