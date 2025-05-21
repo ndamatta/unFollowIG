@@ -58,27 +58,44 @@
 
 <section id="transition-banner" class="section">
   <div class="container">
-    <h2 class="title is-3 has-text-weight-semibold">
-      Just paste your info down here to get rolling
+    <h2 class="title">
+      Just paste your info down here...
     </h2>
-    <p class="subtitle is-4" style="opacity: 0.9;">
-      Add your followers and following — we’ll handle the rest
+    <p class="subtitle is-4">
+      We will take care of the rest.
     </p>
+
   </div>
 </section>
 
+<section id="help-link" class="section pt-4 pb-2 has-text-centered">
+  <p class="is-size-6">
+    Don’t know how? 
+    <a href="#">Check our documentation</a>
+  </p>
+
 <section id="text-box-container" class="section">
   <div class="container">
-    <div class="columns">
+    <div class="columns is-variable is-6">
+      
       <div class="column is-6">
-        <label class="label" for="followers">Followers:</label>
-        <textarea id="followers" class="textarea" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, tempora."></textarea>
+        <div class="field label-wrapper">
+          <label class="label has-text-weight-semibold" for="followers">Followers:</label>
+          <div class="control">
+            <textarea id="followers" class="textarea is-medium is-rounded" placeholder="Paste your followers here..."></textarea>
+          </div>
+        </div>
       </div>
 
       <div class="column is-6">
-        <label class="label" for="following">Following:</label>
-        <textarea id="following" class="textarea" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, tempora."></textarea>
+        <div class="field label-wrapper">
+          <label class="label has-text-weight-semibold" for="following">Following:</label>
+          <div class="control">
+            <textarea id="following" class="textarea is-medium is-rounded" placeholder="Paste your following here..."></textarea>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
