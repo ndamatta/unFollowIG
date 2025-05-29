@@ -7,3 +7,5 @@ document.addEventListener('DOMContentLoaded', () => {
     menu.classList.toggle('is-active');
   });
 });
+
+document.getElementById('year').textContent = new Date().getFullYear();
