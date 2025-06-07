@@ -9,16 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-//Comparator functionality
-function startComparator () {
-const followers_list = document.getElementById('followers').value
-console.log(followers_list);
-}
-
-document.getElementById('textarea-button').addEventListener('click', startComparator)
-
-
- // Copyright year update
+// Copyright year update
 document.getElementById('year').textContent = new Date().getFullYear();
 
 
