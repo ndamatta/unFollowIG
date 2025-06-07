@@ -2,13 +2,14 @@
   --primary-color: #f14668;
   --primary-hover: #ff3860;
   --primary-hover-bg: rgba(255, 56, 96, 0.1);
-  --bg-dark: #2e333d;
+  --bg-dark: #1f2a30;
   --text-light: #ffe3e6;
 }
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
 /* Navbar */
 .navbar {
   background-color: var(--bg-dark);
@@ -20,12 +21,11 @@ body {
 
 .navbar a {
   color: var(--primary-color);
-  transition: transform 0.2s ease, color 0.2s ease;
-  will-change: transform;
+  transition: all 0.2s ease;
 }
 
 .navbar a:hover {
-  transform: scale(1.08);
+  transform: scale(1.01);
   color: var(--primary-hover);
   background-color: white;
 }
@@ -42,17 +42,6 @@ body {
 
 #navbar-title:hover {
   color: var(--primary-hover);
-  transform: none;
-  background-color: transparent;
-}
-
-#navbarBasic a {
-  color: var(--primary-color);
-}
-
-#navbarBasic a:hover {
-  color: var(--primary-hover);
-  background-color: var(--primary-hover-bg);
 }
 
 /* Transition banner */
@@ -61,11 +50,7 @@ body {
   text-align: center;
 }
 
-#transition-banner .title {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
+#transition-banner .title,
 #transition-banner .subtitle {
   color: var(--primary-color);
 }
@@ -79,8 +64,7 @@ body {
   display: inline-block;
   text-decoration: underline;
   color: var(--bg-dark);
-  transition: transform 0.2s ease, color 0.2s ease, text-decoration 0.2s ease;
-  will-change: transform;
+  transition: all 0.2s ease;
 }
 
 #help-link a:hover {
@@ -89,8 +73,7 @@ body {
   text-decoration: none;
 }
 
-/* Text bos and labels */
-
+/* Text box and labels */
 #text-box-container textarea {
   min-height: 150px;
   padding: 0.75rem;
@@ -112,7 +95,7 @@ body {
   background-color: var(--primary-hover);
   color: var(--bg-dark);
   border-radius: 7px;
-  padding: 0.3rem 1rem;
+  padding: 0 .5rem;
   display: inline-block;
   animation: fadeSlide 0.3s ease forwards;
 }
@@ -123,10 +106,22 @@ body {
   font-size: 0.9rem;
 }
 
+/* Button */
+#textarea-button {
+  background-color: var(--bg-dark);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  transition: all 0.2s ease;
+}
+
+#textarea-button:hover {
+  transform: scale(1.01);
+}
+
 @keyframes fadeSlide {
   from {
     opacity: 0;
-    transform: translate(-5px, -5px);
+    transform: translate(1px, -1px);
   }
   to {
     opacity: 1;
@@ -134,12 +129,12 @@ body {
   }
 }
 
-/*Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   #hero-text {
     text-align: center;
   }
-  
+
   #hero-text h1 {
     margin-bottom: 1rem;
   }
@@ -147,6 +142,4 @@ body {
   .column {
     margin-bottom: 2rem;
   }
-  
-
 }
