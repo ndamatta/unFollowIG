@@ -27,7 +27,7 @@ body {
 .navbar a:hover {
   transform: scale(1.01);
   color: var(--primary-hover);
-  background-color: white;
+  background-color: var(--bg-dark);
 }
 
 .navbar a:focus {
