@@ -33,7 +33,9 @@ function runComparator(skipWordsByLanguage) {
     const cleaned_following = cleanArray(raw_following, allSkipWords);
 
     const difference = cleaned_following.filter(user => !cleaned_followers.includes(user));
-    console.log(`Users in following but not in followers:`, difference);
+    
+    showUnfollowers(difference);
+    // console.log(`Users in following but not in followers:`, difference);
     
   } catch(error) {
     console.error("Error running comparator:", error);
