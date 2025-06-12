@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* Navbar */
@@ -95,7 +95,7 @@ body {
   background-color: var(--primary-hover);
   color: var(--bg-dark);
   border-radius: 7px;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
   display: inline-block;
   animation: fadeSlide 0.3s ease forwards;
 }
@@ -116,6 +116,27 @@ body {
 
 #textarea-button:hover {
   transform: scale(1.01);
+}
+
+/* Unfollowers result */
+#unfollowers h2 {
+  display: inline-block;
+  padding: 1rem;
+  margin: 4rem 0 1rem 0;
+  color: var(--bg-dark);
+  border: 5px solid var(--primary-color);
+  border-radius: 30px;
+}
+#unfollowers h2.success {
+  display: inline-block;
+  padding: 1rem;
+  margin: 4rem 0 1rem 0;
+  color: var(--bg-dark);
+  border: 5px solid green;
+  border-radius: 30px;
+}
+#unfollowersAccounts li {
+  margin: 1.3rem 0rem;
 }
 
 @keyframes fadeSlide {
