@@ -1,3 +1,16 @@
+/**
+ * Displays the list of unfollowers inside the HTML element with ID "unfollowers".
+ *
+ * @param {Object} comparatorResult - The result object from the comparator containing:
+ *   - followers: array of cleaned followers
+ *   - following: array of cleaned following
+ *   - difference: array of users followed but not following back (unfollowers)
+ *
+ * Behavior:
+ * - If both followers and following lists are empty, prompts the user to paste info.
+ * - If no unfollowers found, shows a success message.
+ * - Otherwise, displays a clickable list of unfollowers linking to their Instagram profiles.
+ */
 function showUnfollowers(comparatorResult) {
   const container = document.getElementById("unfollowers");
 
