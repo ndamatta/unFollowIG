@@ -1,14 +1,18 @@
-function showUnfollowers(unfollowers) {
+function showUnfollowers(comparatorResult) {
   const container = document.getElementById("unfollowers");
 
-  if (unfollowers.length === 0) {
-    const html = `<h2 class="success">You don't have any unfollowers</h2>`;
-    container.innerHTML = html;
+  if (
+    comparatorResult.followers.length === 0 &&
+    comparatorResult.following.length === 0
+  ) {
+    container.innerHTML = `<h2>Please, paste your info above</h2>`;
+  } else if (comparatorResult.difference.length === 0) {
+    container.innerHTML = `<h2 class="success">You don't have any unfollowers</h2>`;
   } else {
-    let html = `<h2>You have ${unfollowers.length} unfollowers</h2>`;
+    let html = `<h2>You have ${comparatorResult.difference.length} unfollowers</h2>`;
     html += `<ul id="unfollowersAccounts">`;
 
-    unfollowers.forEach((user) => {
+    comparatorResult.difference.forEach((user) => {
       html += `
         <li>
           <a href="https://www.instagram.com/${user}" target="_blank">${user}</a>
