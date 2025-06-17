@@ -1,15 +1,19 @@
 /**
- * Cleans an array of strings by trimming, lowercasing, and filtering out unwanted entries.
+ * Cleans an array of strings by splitting, trimming, lowercasing, and filtering out unwanted entries.
  *
  * @param {string[]} array - The input array of strings to clean.
- * @param {string[]} skipWords - An array of words; if a line starts with any of them, it will be removed.
+ * @param {string[]} skipWords - An array of words; if an entry starts with any of them, it will be removed.
  * @returns {string[]} A new array with cleaned and filtered strings.
  *
+ * Behavior:
+ * - Each line is split by commas, so CSV-style entries are individually processed.
+ * - Each part is trimmed and converted to lowercase.
+ *
  * Filters out:
- * - Empty lines
- * - Lines starting with any of the skipWords
- * - Lines containing a 4-digit number (e.g., a year like 2024)
- * - Lines containing a time pattern (e.g., 12:30)
+ * - Empty entries
+ * - Entries starting with any of the skipWords
+ * - Entries containing a 4-digit number (e.g., a year like 2024)
+ * - Entries containing a time pattern (e.g., 12:30)
  *
  * Logs an error and returns an empty array if input is not valid.
  */
@@ -21,7 +25,7 @@ function cleanArray(array, skipWords) {
   }
 
   return array
-    .map((line) => line.trim().toLowerCase())
+    .flatMap((line) => line.split(',').map((part) => part.trim().toLowerCase()))
     .filter((line) => {
       if (
         line === "" ||
