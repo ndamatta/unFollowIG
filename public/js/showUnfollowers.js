@@ -1,38 +1,48 @@
 /**
- * Displays the list of unfollowers inside the HTML element with ID "unfollowers".
+ * Displays the list of unfollowers inside the HTML element with ID "unfollowers",
+ * applying Animate.css classes for entry animations.
  *
  * @param {Object} comparatorResult - The result object from the comparator containing:
- *   - followers: array of cleaned followers
- *   - following: array of cleaned following
- *   - difference: array of users followed but not following back (unfollowers)
+ *   - followers: string[] — cleaned list of followers
+ *   - following: string[] — cleaned list of accounts being followed
+ *   - difference: string[] — accounts that don't follow back
  *
  * Behavior:
- * - If both followers and following lists are empty, prompts the user to paste info.
- * - If no unfollowers found, shows a success message.
- * - Otherwise, displays a clickable list of unfollowers linking to their Instagram profiles.
+ * - If the container or input is invalid, logs an error and exits.
+ * - If both followers and following are empty, shows a prompt to paste data.
+ * - If there are no unfollowers, shows a success message.
+ * - Otherwise, displays a list of unfollowers as clickable Instagram links.
+ * - Animations (using Animate.css) are applied to the messages/lists.
+ *
+ * Uses a helper function `updateContainer()` to update content and apply animation classes.
  */
 function showUnfollowers(comparatorResult) {
   const container = document.getElementById("unfollowers");
+  
+  if (!container || !comparatorResult) {
+    console.error("Invalid input or missing container");
+    return;
+  }
 
   if (
     comparatorResult.followers.length === 0 &&
     comparatorResult.following.length === 0
   ) {
-    container.innerHTML = `<h2>Please, paste your info above</h2>`;
-  } else if (comparatorResult.difference.length === 0) {
-    container.innerHTML = `<h2 class="success">You don't have any unfollowers</h2>`;
-  } else {
-    let html = `<h2>You have ${comparatorResult.difference.length} unfollowers</h2>`;
-    html += `<ul id="unfollowersAccounts">`;
-
-    comparatorResult.difference.forEach((user) => {
-      html += `
-        <li>
-          <a href="https://www.instagram.com/${user}" target="_blank">${user}</a>
-        </li>`;
-    });
-
-    html += `</ul>`;
-    container.innerHTML = html;
+    return updateContainer(container, "Please, paste your info above", "animate__bounceIn");
   }
+
+  if (comparatorResult.difference.length === 0) {
+    return updateContainer(container, "You don't have any unfollowers", "success animate__bounceIn");
+  }
+
+  const listItems = comparatorResult.difference.map(user => 
+    `<li><a href="https://www.instagram.com/${user}" target="_blank">${user}</a></li>`
+  ).join("");
+
+  updateContainer(container, `You have ${comparatorResult.difference.length} unfollowers`, "animate__bounceIn", listItems);
 }
+
+function updateContainer(container, message, animationClass, list = "") {
+  container.innerHTML = `<h2 class="${animationClass}">${message}</h2>${list ? `<ul id="unfollowersAccounts">${list}</ul>` : ""}`;
+}
+
