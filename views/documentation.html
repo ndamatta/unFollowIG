@@ -69,7 +69,68 @@
       </div>
     </nav>
     <main>
-        <h1 class="has-text-centered mt-5 mb-5">Not a placeholder of course...</h1>
+      <!-- small hero -->
+      <section class="hero is-small" aria-labelledby="doc-hero-heading">
+        <div class="hero-body">
+          <div class="container">
+            <h1 id="doc-hero-heading" class="title animate__animated animate__fadeIn">
+              Documentation
+            </h1>
+            <p class="subtitle animate__animated animate__fadeIn">
+              Learn how to use unFollowIG and get answers to common questions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- transition banner -->
+      <section class="section" aria-labelledby="doc-banner-heading">
+        <div class="container has-text-centered">
+          <h2 id="doc-banner-heading" class="title animate__animated animate__fadeInUp">
+            Let’s get you started
+          </h2>
+          <p class="subtitle is-5 animate__animated animate__fadeInUp animate__delay-1s">
+            Quick guide to using the tool effectively.
+          </p>
+        </div>
+      </section>
+
+      <!-- main menu -->
+      <section class="section">
+        <div class="container">
+          <div class="columns">
+            <!-- sidebar -->
+            <div class="column is-one-quarter">
+              <aside class="menu animate__animated animate__fadeIn">
+                <p class="menu-label">Sections</p>
+                <ul class="menu-list">
+                  <li><a data-section="intro" class="is-active">Introduction</a></li>
+                  <li><a data-section="usage">Usage</a></li>
+                  <li><a data-section="faq">FAQ</a></li>
+                </ul>
+              </aside>
+            </div>
+
+            <!-- content -->
+            <div class="column content animate__animated animate__fadeIn">
+              <div id="intro" class="doc-section">
+                <h2 class="title">Introduction</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sequi inventore.</p>
+              </div>
+
+              <div id="usage" class="doc-section is-hidden">
+                <h2 class="title">Usage</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore officia exercitationem.</p>
+              </div>
+
+              <div id="faq" class="doc-section is-hidden">
+                <h2 class="title">FAQ</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat error repellendus?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer has-background-light" aria-label="Footer">
@@ -88,3 +149,4 @@
     <!-- JS -->
     <script src="/js/main-js.js" defer></script>
   </body>
+</html>
