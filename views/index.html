@@ -80,14 +80,22 @@
                     src="/img/logo.webp"
                     alt="unFollowIG logo showing the app interface"
                     loading="lazy"
+                    class="animate__animated animate__fadeIn"
                   />
                 </figure>
               </div>
 
               <div id="hero-text" class="column is-5">
                 <div class="container is-mobile">
-                  <h1 id="hero-heading" class="title">unFollowIG</h1>
-                  <p class="subtitle">
+                  <h1
+                    id="hero-heading"
+                    class="title animate__animated animate__fadeInDown"
+                  >
+                    unFollowIG
+                  </h1>
+                  <p
+                    class="subtitle animate__animated animate__fadeIn animate__delay-1s"
+                  >
                     Discover who isn't following you back on Instagram with our
                     simple comparison tool.
                   </p>
@@ -104,10 +112,17 @@
         aria-labelledby="banner-heading"
       >
         <div class="container">
-          <h2 id="banner-heading" class="title">
+          <h2
+            id="banner-heading"
+            class="title animate__animated animate__fadeInUp"
+          >
             Just paste your info down here...
           </h2>
-          <p class="subtitle is-4">We'll take care of the rest.</p>
+          <p
+            class="subtitle is-4 animate__animated animate__fadeInUp animate__delay-1s"
+          >
+            We'll take care of the rest.
+          </p>
         </div>
       </section>
 
@@ -143,8 +158,7 @@
                       class="textarea is-medium is-rounded"
                       placeholder="Paste your followers here..."
                       aria-describedby="followers-help"
-                    >
-                    </textarea>
+                    ></textarea>
                   </div>
                   <p id="followers-help" class="help">
                     Paste your Instagram followers list (comma separated or one
@@ -178,7 +192,7 @@
               <button
                 type="button"
                 id="textarea-button"
-                class="button is-medium"
+                class="button is-medium animate__animated animate__fadeInUp"
                 aria-live="polite"
               >
                 Find Unfollowers
@@ -186,7 +200,7 @@
             </div>
           </form>
 
-          <div id="unfollowers" class="has-text-centered "></div>
+          <div id="unfollowers" class="has-text-centered"></div>
         </div>
       </section>
     </main>
