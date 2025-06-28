@@ -73,7 +73,10 @@
       <section class="hero is-small" aria-labelledby="doc-hero-heading">
         <div class="hero-body">
           <div class="container">
-            <h1 id="doc-hero-heading" class="title animate__animated animate__fadeIn">
+            <h1
+              id="doc-hero-heading"
+              class="title animate__animated animate__fadeIn"
+            >
               Documentation
             </h1>
             <p class="subtitle animate__animated animate__fadeIn">
@@ -86,10 +89,15 @@
       <!-- transition banner -->
       <section class="section" aria-labelledby="doc-banner-heading">
         <div class="container has-text-centered">
-          <h2 id="doc-banner-heading" class="title animate__animated animate__fadeInUp">
+          <h2
+            id="doc-banner-heading"
+            class="title animate__animated animate__fadeInUp"
+          >
             Let’s get you started
           </h2>
-          <p class="subtitle is-5 animate__animated animate__fadeInUp animate__delay-1s">
+          <p
+            class="subtitle is-5 animate__animated animate__fadeInUp animate__delay-1s"
+          >
             Quick guide to using the tool effectively.
           </p>
         </div>
@@ -104,7 +112,9 @@
               <aside class="menu animate__animated animate__fadeIn">
                 <p class="menu-label">Sections</p>
                 <ul class="menu-list">
-                  <li><a data-section="intro" class="is-active">Introduction</a></li>
+                  <li>
+                    <a data-section="intro" class="is-active">Introduction</a>
+                  </li>
                   <li><a data-section="usage">Usage</a></li>
                   <li><a data-section="faq">FAQ</a></li>
                 </ul>
@@ -115,17 +125,119 @@
             <div class="column content animate__animated animate__fadeIn">
               <div id="intro" class="doc-section">
                 <h2 class="title">Introduction</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sequi inventore.</p>
+                <p>
+                  <strong>unFollowIG</strong> is a free and
+                  <strong>open-source</strong> tool designed to help you compare
+                  your Instagram <em>followers</em> and
+                  <em>following</em> lists.
+                </p>
+                <p>
+                  Unlike many other websites that ask for your password, request
+                  invasive permissions, or force you to run risky browser
+                  scripts, unFollowIG is <strong>100% privacy-friendly</strong>.
+                  It runs entirely in your browser.
+                  <strong>No data is uploaded, saved, or shared.</strong>
+                </p>
+                <p>
+                  You can check the
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >source code on GitHub</a
+                  >
+                  to verify exactly how it works.
+                </p>
               </div>
 
               <div id="usage" class="doc-section is-hidden">
                 <h2 class="title">Usage</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore officia exercitationem.</p>
+
+                <div class="box">
+                  <h3 class="subtitle has-text-weight-semibold">
+                    How to Safely Get Your Instagram Data
+                  </h3>
+
+                  <ol>
+                    <li>
+                      Go to the
+                      <a
+                        href="https://accountscenter.meta.com/"
+                        target="_blank"
+                        rel="noopener"
+                        >Meta Account Center</a
+                      >.
+                    </li>
+                    <li>
+                      In the sidebar, select
+                      <strong>Your Information</strong> then
+                      <strong>Download Your Information</strong>.
+                    </li>
+                    <li>Select <strong>Instagram</strong> as the platform.</li>
+                    <li>
+                      Click <strong>Submit Request</strong>. Meta will notify
+                      you when ready.
+                    </li>
+                    <li>Download and unzip the file.</li>
+                    <li>
+                      Open <code>followers.html</code> and
+                      <code>following.html</code> in a web browser.
+                    </li>
+                    <li>
+                      Select and copy the usernames visible on the page (avoid
+                      copying extra buttons or text).
+                    </li>
+                    <li>
+                      Paste the followers into the left box, and the following
+                      into the right box on unFollowIG.
+                    </li>
+                    <li>
+                      Click <strong>Find Unfollowers</strong> to see the
+                      results.
+                    </li>
+                  </ol>
+                </div>
+
+                <div id="info-popup" class="notification is-info">
+                  <strong>Tip:</strong> Copy all the content as plain text from the
+                  rendered HTML page (ALT + A). This works perfectly with unFollowIG’s
+                  input format (comma or line separated). <br /><br />
+                  <em>Note:</em> These steps are for guidance only. Instagram
+                  often changes its data export content and layout, so your
+                  experience may vary.
+                </div>
               </div>
 
               <div id="faq" class="doc-section is-hidden">
                 <h2 class="title">FAQ</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat error repellendus?</p>
+
+                <ul>
+                  <li>
+                    <strong>Does this tool store my data?</strong><br />
+                    No. Everything runs locally in your browser. No data is
+                    stored or sent anywhere.
+                  </li>
+                  <li>
+                    <strong>Does it connect to Instagram?</strong><br />
+                    No. This is a fully manual tool. You download your own data
+                    and paste it in. No login or API needed.
+                  </li>
+                  <li>
+                    <strong>Can it show who blocked me?</strong><br />
+                    No. It only compares followers vs following. Instagram does
+                    not share block lists in the downloadable data.
+                  </li>
+                  <li>
+                    <strong>Why am I getting empty results?</strong><br />
+                    Double-check that both boxes are filled and that you copied
+                    the usernames correctly. Also make sure you used HTML files
+                    from Meta.
+                  </li>
+                  <li>
+                    <strong>Does it work on mobile?</strong><br />
+                    Yes, but the experience is better on desktop.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
