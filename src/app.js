@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path'); 
+const { startKeepAlive } = require('./keepAlive');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -29,4 +30,7 @@ app.use((req, res) => {
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+    
+    
+    startKeepAlive('https://unfollowig.onrender.com/');
 });
