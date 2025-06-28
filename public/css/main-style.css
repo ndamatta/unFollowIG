@@ -140,7 +140,7 @@ body {
 }
 
 /* Documentation */
-.menu-list a.is-active {
+.menu-list a.is-active, #info-popup {
   background-color: #f14668;
   color: white;
 }
