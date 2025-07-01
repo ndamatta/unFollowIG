@@ -2,8 +2,11 @@
   --primary-color: #f14668;
   --primary-hover: #ff3860;
   --primary-hover-bg: rgba(255, 56, 96, 0.1);
+  --success-color: #00d1b2;
   --bg-dark: #1f2a30;
   --text-light: #ffe3e6;
+  --border-radius-lg: 30px;
+  --border-radius-sm: 7px;
 }
 
 body {
@@ -94,7 +97,7 @@ body {
 .label-wrapper:focus-within .label {
   background-color: var(--primary-hover);
   color: var(--bg-dark);
-  border-radius: 7px;
+  border-radius: var(--border-radius-sm);
   padding: 0 0.5rem;
   display: inline-block;
   animation: fadeSlide 0.3s ease forwards;
@@ -106,15 +109,19 @@ body {
   font-size: 0.9rem;
 }
 
-/* Button */
-#textarea-button, #p404-button {
+/* Buttons */
+.btn-primary,
+#textarea-button, 
+#p404-button {
   background-color: var(--bg-dark);
   color: white;
   border: 2px solid var(--primary-color);
   transition: all 0.2s ease;
 }
 
-#textarea-button:hover {
+.btn-primary:hover,
+#textarea-button:hover,
+#p404-button:hover {
   transform: scale(1.01);
 }
 
@@ -125,23 +132,21 @@ body {
   margin: 4rem 0 1rem 0;
   color: var(--bg-dark);
   border: 5px solid var(--primary-color);
-  border-radius: 30px;
+  border-radius: var(--border-radius-lg);
 }
+
 #unfollowers h2.success {
-  display: inline-block;
-  padding: 1rem;
-  margin: 4rem 0 1rem 0;
-  color: var(--bg-dark);
-  border: 5px solid green;
-  border-radius: 30px;
+  border-color: var(--success-color);
 }
+
 #unfollowersAccounts li {
-  margin: 1.3rem 0rem;
+  margin: 1.3rem 0;
 }
 
 /* Documentation */
-.menu-list a.is-active, #info-popup {
-  background-color: #f14668;
+.menu-list a.is-active, 
+#info-popup {
+  background-color: var(--primary-color);
   color: white;
 }
 
@@ -156,7 +161,6 @@ body {
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   #hero-text {
     text-align: center;
