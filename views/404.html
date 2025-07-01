@@ -8,32 +8,26 @@
       name="description"
       content="unFollowIG helps you find Instagram users who don't follow you back by comparing your followers and following lists"
     />
+    <meta property="og:title" content="404 - Page Not Found | unFollowIG">
+    <meta property="og:description" content="Page not found on unFollowIG. Return to find Instagram users who don't follow you back">
+    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Preloaded -->
     <link
-      rel="preload"
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <link
-      rel="preload"
-      href="/css/bulma.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
+    <link rel="preload" href="/css/bulma.min.css" as="style" />
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
     />
 
-    <!-- Favicon in the future -->
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon.ico" sizes="any" />
 
-    <!-- CSS resources -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/bulma.min.css" />
     <link rel="stylesheet" href="/css/main-style.css" />
     <link
@@ -44,6 +38,8 @@
     <title>404 - Page Not Found | unFollowIG</title>
   </head>
   <body>
+    <a href="#main-content" class="is-sr-only">Skip to main content</a>
+    
     <nav class="navbar is-light" role="navigation" aria-label="Main navigation">
       <div class="navbar-brand">
         <a id="navbar-title" class="navbar-item" href="/" aria-current="page">unFollowIG</a>
@@ -74,7 +70,7 @@
       </div>
     </nav>
 
-    <main>
+    <main id="main-content">
       <section class="hero is-fullheight has-text-centered" aria-labelledby="error-heading">
         <div class="hero-body">
           <div class="container">
@@ -82,7 +78,7 @@
               404
             </h1>
             <h2 class="subtitle is-size-4 animate__animated animate__fadeIn animate__delay-1s">
-              We checked your followers… this page wasn’t one of them.
+              We checked your followers… this page wasn't one of them.
             </h2>
             <a href="/" id="p404-button" class="button is-medium mt-4 animate__animated animate__fadeIn">
               Return to Home

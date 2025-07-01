@@ -8,6 +8,15 @@
       name="description"
       content="unFollowIG helps you find Instagram users who don't follow you back by comparing your followers and following lists"
     />
+    <meta
+      property="og:title"
+      content="unFollowIG - Find Instagram Users Who Don't Follow You Back"
+    />
+    <meta
+      property="og:description"
+      content="unFollowIG helps you find Instagram users who don't follow you back by comparing your followers and following lists"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Preloaded -->
     <link
@@ -21,10 +30,10 @@
       as="style"
     />
 
-    <!-- Favicon in the future -->
+    <!-- Favicon -->
     <link rel="icon" href="/img/favicon.ico" sizes="any" />
 
-    <!-- CSS resources -->
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/bulma.min.css" />
     <link rel="stylesheet" href="/css/main-style.css" />
     <link
@@ -35,6 +44,8 @@
     <title>unFollowIG - Find Instagram Users Who Don't Follow You Back</title>
   </head>
   <body>
+    <a href="#main-content" class="is-sr-only">Skip to main content</a>
+
     <nav class="navbar is-light" role="navigation" aria-label="Main navigation">
       <div class="navbar-brand">
         <a id="navbar-title" class="navbar-item" href="/" aria-current="page"
@@ -69,7 +80,7 @@
       </div>
     </nav>
 
-    <main>
+    <main id="main-content">
       <section class="hero is-fullheight" aria-labelledby="hero-heading">
         <div class="hero-body">
           <div class="container">
@@ -129,7 +140,7 @@
       <section id="help-link" class="section pt-4 pb-2 has-text-centered">
         <p class="is-size-6">
           Don't know how?
-          <a href="#documentation" aria-label="Learn how to use unFollowIG"
+          <a href="/documentation" aria-label="Learn how to use unFollowIG"
             >Check our documentation</a
           >
         </p>
@@ -146,58 +157,66 @@
           </h2>
 
           <form id="unfollow-form">
-            <div class="columns is-variable is-6">
-              <div class="column is-6">
-                <div class="field label-wrapper">
-                  <label class="label has-text-weight-semibold" for="followers"
-                    >Followers:</label
-                  >
-                  <div class="control">
-                    <textarea
-                      id="followers"
-                      class="textarea is-medium is-rounded"
-                      placeholder="Paste your followers here..."
-                      aria-describedby="followers-help"
-                    ></textarea>
+            <fieldset>
+              <legend class="is-sr-only">Instagram Data Comparison</legend>
+
+              <div class="columns is-variable is-6">
+                <div class="column is-6">
+                  <div class="field label-wrapper">
+                    <label
+                      class="label has-text-weight-semibold"
+                      for="followers"
+                      >Followers:</label
+                    >
+                    <div class="control">
+                      <textarea
+                        id="followers"
+                        class="textarea is-medium is-rounded"
+                        placeholder="Paste your followers here..."
+                        aria-describedby="followers-help"
+                      ></textarea>
+                    </div>
+                    <p id="followers-help" class="help">
+                      Paste your Instagram followers list (comma separated or
+                      one per line)
+                    </p>
                   </div>
-                  <p id="followers-help" class="help">
-                    Paste your Instagram followers list (comma separated or one
-                    per line)
-                  </p>
+                </div>
+
+                <div class="column is-6">
+                  <div class="field label-wrapper">
+                    <label
+                      class="label has-text-weight-semibold"
+                      for="following"
+                      >Following:</label
+                    >
+                    <div class="control">
+                      <textarea
+                        id="following"
+                        class="textarea is-medium is-rounded"
+                        placeholder="Paste your following here..."
+                        aria-describedby="following-help"
+                      ></textarea>
+                    </div>
+                    <p id="following-help" class="help">
+                      Paste your Instagram following list (comma separated or
+                      one per line)
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div class="column is-6">
-                <div class="field label-wrapper">
-                  <label class="label has-text-weight-semibold" for="following"
-                    >Following:</label
-                  >
-                  <div class="control">
-                    <textarea
-                      id="following"
-                      class="textarea is-medium is-rounded"
-                      placeholder="Paste your following here..."
-                      aria-describedby="following-help"
-                    ></textarea>
-                  </div>
-                  <p id="following-help" class="help">
-                    Paste your Instagram following list (comma separated or one
-                    per line)
-                  </p>
-                </div>
+              <div class="has-text-centered mt-5">
+                <button
+                  type="button"
+                  id="textarea-button"
+                  class="button is-medium animate__animated animate__fadeInUp"
+                  aria-live="polite"
+                >
+                  Find Unfollowers
+                </button>
               </div>
-            </div>
-
-            <div class="has-text-centered mt-5">
-              <button
-                type="button"
-                id="textarea-button"
-                class="button is-medium animate__animated animate__fadeInUp"
-                aria-live="polite"
-              >
-                Find Unfollowers
-              </button>
-            </div>
+            </fieldset>
           </form>
 
           <div id="unfollowers" class="has-text-centered"></div>
