@@ -24,4 +24,4 @@ function startKeepAlive(url, intervalMs = 600000) {
   return setInterval(ping, intervalMs); // Schedule repeated pings
 }
 
-module.exports = { startKeepAlive };
+module.exports =  startKeepAlive;

@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path'); 
-const { startKeepAlive } = require('./keepAlive');
+const startKeepAlive  = require('./src/keepAlive');
+const documentationRoute = require('./routes/documentation')
+const homeRoute = require('./routes/home')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,14 +19,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Routes
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/index.html'));
-});
-app.get('/documentation', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/documentation.html'));
-});
+app.use('/', homeRoute)
+app.use('/documentation', documentationRoute)
+
+// 404 fallback
 app.use((req, res) => {
-    res.status(404).sendFile(path.join(__dirname, '../views/404.html'));
+    res.status(404).sendFile(path.join(process.cwd(), '/views/404.html'));
 });
 
 // Start the server
