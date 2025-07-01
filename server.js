@@ -3,6 +3,7 @@ const path = require('path');
 const startKeepAlive  = require('./src/keepAlive');
 const documentationRoute = require('./routes/documentation')
 const homeRoute = require('./routes/home')
+const compareRoute = require('./routes/compare')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -21,6 +22,7 @@ if (process.env.NODE_ENV === 'production') {
 // Routes
 app.use('/', homeRoute)
 app.use('/documentation', documentationRoute)
+app.use('/compare', compareRoute);
 
 // 404 fallback
 app.use((req, res) => {

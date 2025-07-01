@@ -1,0 +1,9 @@
+{
+  "spanish": ["instagram", "seguidores", "seguidos", "perfiles cuyo contenido eliges ver", "siguiendo", "sugerido", "patrocinado", "publicidad", "promocionado", "contenido sugerido"],
+  "english": ["instagram", "followers", "following", "profiles you choose to see content from", "suggested", "sponsored", "ad", "advertisement", "promoted", "suggested content"],
+  "portuguese": ["instagram", "seguidores", "seguindo", "perfis cujo conteúdo você escolhe ver", "sugerido", "patrocinado", "publicidade", "promovido"],
+  "french": ["instagram", "abonnés", "abonnements", "profils dont vous choisissez de voir le contenu", "suggéré", "sponsorisé", "publicité", "promu"],
+  "german": ["instagram", "follower", "folge ich", "profile deren inhalte du siehst", "vorgeschlagen", "gesponsert", "werbung", "beworben"],
+  "italian": ["instagram", "follower", "seguiti", "profili di cui scegli di vedere i contenuti", "suggerito", "sponsorizzato", "pubblicità", "promosso"],
+  "general": ["http", "https", "www", "@", "#", ".", "com", "net", "org", "·", "•", "…"]
+}
