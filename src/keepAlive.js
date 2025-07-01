@@ -1,17 +1,13 @@
 const https = require('https');
 
 /**
- * Starts a periodic "keep alive" ping to a specified URL.
+ * Sends a ping to a URL every X milliseconds to keep it alive.
  *
- * This helps keep your deployed app awake by sending HTTP GET requests
- * at a regular interval, preventing it from idling in free-tier hosting.
- *
- * @param {string} url - The full URL to ping (e.g. 'https://test.com/').
- * @param {number} [intervalMs=600000] - Interval between pings in milliseconds (default 10 minutes).
- * @returns {NodeJS.Timeout} The interval timer object, can be cleared to stop pinging.
+ * @param {string} url - The URL to ping (e.g. 'https://example.com/').
+ * @param {number} [intervalMs=600000] - Interval in milliseconds (default 10 minutes).
+ * @returns {NodeJS.Timeout} - The interval timer.
  */
 function startKeepAlive(url, intervalMs = 600000) {
-  // Internal function to send a GET request to the URL
   function ping() {
     https.get(url, (res) => {
       console.log(`Pinged ${url} - Status: ${res.statusCode}`);
@@ -20,8 +16,8 @@ function startKeepAlive(url, intervalMs = 600000) {
     });
   }
 
-  ping(); // Immediate first ping on start
-  return setInterval(ping, intervalMs); // Schedule repeated pings
+  ping();
+  return setInterval(ping, intervalMs);
 }
 
-module.exports =  startKeepAlive;
+module.exports = startKeepAlive;
