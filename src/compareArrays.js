@@ -1,29 +1,35 @@
 /**
  * Cleans an array of strings by splitting, trimming, lowercasing, and filtering out unwanted entries.
+ * Removes empty strings, entries starting with skip words, years, timestamps, and month-day patterns.
  *
  * @param {string[]} array - The input array of strings to clean.
- * @param {string[]} skipWords - An array of words; if an entry starts with any of them, it will be removed.
+ * @param {Object} skipWords - A JSON object containing skip words and month abbreviations; entries starting with skip words will be removed.
  * @returns {string[]} A new array with cleaned and filtered strings.
  */
 function cleanArray(array, skipWords) {
-  //Basic verification to check if user input is an array.
   if (!Array.isArray(array) || !Array.isArray(skipWords)) {
     console.error("Invalid input to cleanArray: expected arrays.");
     return [];
   }
+
+  // Create regex pattern from JSON months
+  const allMonths = Object.keys(skipWords)
+    .filter(key => key.startsWith('months_'))
+    .flatMap(key => skipWords[key]);
+ 
+  const monthPattern = new RegExp(`^(${allMonths.join('|')})\\s\\d{2}$`);
+  
+  const shouldSkip = (line) => {
+    return line === "" ||
+           skipWords.some((word) => line.startsWith(word)) ||
+           /\d{4}/.test(line) || // for years, example 2024
+           /\d{1,2}:\d{2}/.test(line) || // for time stamp, example 12:30
+           monthPattern.test(line); // for month + day pattern, example "jan 15"
+  };
+
   return array
     .flatMap((line) => line.split(',').map((part) => part.trim().toLowerCase()))
-    .filter((line) => {
-      if (
-        line === "" ||
-        skipWords.some((word) => line.startsWith(word)) ||
-        /\d{4}/.test(line) || // for years, example 2024
-        /\d{1,2}:\d{2}/.test(line) // for time stamp, example 12:30
-      ) {
-        return false;
-      }
-      return true;
-    });
+    .filter((line) => !shouldSkip(line));
 }
 
 /**
