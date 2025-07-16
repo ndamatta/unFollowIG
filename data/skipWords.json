@@ -1,9 +1,16 @@
 {
-  "spanish": ["instagram", "seguidores", "seguidos", "perfiles cuyo contenido eliges ver", "siguiendo", "sugerido", "patrocinado", "publicidad", "promocionado", "contenido sugerido"],
-  "english": ["instagram", "followers", "following", "profiles you choose to see content from", "suggested", "sponsored", "ad", "advertisement", "promoted", "suggested content"],
-  "portuguese": ["instagram", "seguidores", "seguindo", "perfis cujo conteúdo você escolhe ver", "sugerido", "patrocinado", "publicidade", "promovido"],
-  "french": ["instagram", "abonnés", "abonnements", "profils dont vous choisissez de voir le contenu", "suggéré", "sponsorisé", "publicité", "promu"],
-  "german": ["instagram", "follower", "folge ich", "profile deren inhalte du siehst", "vorgeschlagen", "gesponsert", "werbung", "beworben"],
-  "italian": ["instagram", "follower", "seguiti", "profili di cui scegli di vedere i contenuti", "suggerito", "sponsorizzato", "pubblicità", "promosso"],
-  "general": ["http", "https", "www", "@", "#", ".", "com", "net", "org", "·", "•", "…"]
+  "lang_spanish": ["instagram", "seguidores", "seguidos", "perfiles cuyo contenido eliges ver", "siguiendo", "sugerido", "patrocinado", "publicidad", "promocionado", "contenido sugerido"],
+  "lang_english": ["instagram", "followers", "following", "profiles you choose to see content from", "suggested", "sponsored", "ad", "advertisement", "promoted", "suggested content"],
+  "lang_portuguese": ["instagram", "seguidores", "seguindo", "perfis cujo conteúdo você escolhe ver", "sugerido", "patrocinado", "publicidade", "promovido"],
+  "lang_french": ["instagram", "abonnés", "abonnements", "profils dont vous choisissez de voir le contenu", "suggéré", "sponsorisé", "publicité", "promu"],
+  "lang_german": ["instagram", "follower", "folge ich", "profile deren inhalte du siehst", "vorgeschlagen", "gesponsert", "werbung", "beworben"],
+  "lang_italian": ["instagram", "follower", "seguiti", "profili di cui scegli di vedere i contenuti", "suggerito", "sponsorizzato", "pubblicità", "promosso"],
+  "general": ["http", "https", "www", "@", "#", ".", "com", "net", "org", "·", "•", "…"],
+  "months_eng": ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"],
+  "months_spa": ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
+  "months_por": ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"],
+  "months_fre": ["jan", "fév", "mar", "avr", "mai", "jun", "jul", "aoû", "sep", "oct", "nov", "déc"],
+  "months_ger": ["jan", "feb", "mär", "apr", "mai", "jun", "jul", "aug", "sep", "okt", "nov", "dez"],
+  "months_ita": ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"],
+  "numbers": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"]
 }
