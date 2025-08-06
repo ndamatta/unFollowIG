@@ -1,0 +1,22 @@
+name: Keep Render app warm (ARG 8:00–23:00)
+
+on:
+  schedule:
+    # Every 20 minutes between 11:00 and 23:00 UTC (8:00–20:00 ARG)
+    - cron: '0,20,40 11-23 * * *'
+    # Every 20 minutes between 00:00 and 02:00 UTC (21:00–23:00 ARG)
+    - cron: '0,20,40 0-2 * * *'
+  workflow_dispatch:
+
+env:
+  TARGET_URL: https://unfollowig.onrender.com
+
+jobs:
+  ping-render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping Render service
+        run: |
+          echo "Pinging $TARGET_URL..."
+          curl -IL --fail "$TARGET_URL" || echo "Ping failed at $(date)"
