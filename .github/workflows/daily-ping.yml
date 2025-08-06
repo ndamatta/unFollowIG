@@ -1,4 +1,4 @@
-name: Keep Render app warm (ARG 8:00–23:00)
+name: keep app warm (ARG 8:00–23:00)
 
 on:
   schedule:
