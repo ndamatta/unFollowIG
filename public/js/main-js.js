@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//Capture compare button
+const button = document.querySelector("#textarea-button");
+button.addEventListener("click", () => {
+  console.log("Clicked");
+});
+
 // Documentation hide sections
 document.querySelectorAll(".menu-list a").forEach((link) => {
   link.addEventListener("click", (e) => {
